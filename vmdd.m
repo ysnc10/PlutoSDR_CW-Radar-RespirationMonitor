@@ -6,4 +6,4 @@ cleanphase = sum(imf(:,2:8),2);
 figure;
 plot(x2);toc
 figure;
-plot(cleanphase);toc
+plot(cleanphase);
