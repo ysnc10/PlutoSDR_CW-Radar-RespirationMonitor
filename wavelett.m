@@ -1,0 +1,13 @@
+tic;
+[c,l] = wavedec(phase, 9, 'db6');      
+approx = appcoef(c, l, 'db6');  
+[fenvu,fenvl] = envelope(approx, 50, 'peak'); 
+[p,l]=findpeaks(fenvu,"MinPeakProminence",1,"MinPeakDistance",50,"Annotate","extents");
+figure;
+plot(approx);
+hold on;
+plot(fenvu);
+hold on;
+plot(l,p,'vg', 'MarkerFaceColor','g');legend("c","env","peak");
+figure;
+findpeaks(fenvu,"MinPeakProminence",1,"MinPeakDistance",50,"Annotate","extents");
