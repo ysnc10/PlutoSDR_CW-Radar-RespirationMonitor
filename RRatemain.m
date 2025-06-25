@@ -1,6 +1,6 @@
 clear; clc;
 Fs = 70e3;    % Sample rate 
-Fc = 4.6e9;    % Carrier frequency
+Fc = 2.4e9;    % Carrier frequency
 F0=300;         % transmitted tone
 T=2;
 SamplesPerFrame = T*Fs;
